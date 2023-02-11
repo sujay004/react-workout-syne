@@ -12,16 +12,23 @@ const AddExpenseForm = (props)=>{
     const onClose =()=>{
         props.closeForm(inputValue);
     }
+    const onSubmit = (event)=>{
+        event.preventDefault();
+        props.onSubmit({
+            id:'',
+            expenseAmount: inputValue
+        })
+    }
 
     return (
       <div className="card">
          <div className="card-body">
         <form action="">
-
+        <label >Amount</label>
         <input type="text" onChange={ChangeValue} />
         <p>Result of inpout Value: {inputValue}</p>
 
-        <button>Submit</button>
+        <button onClick={onSubmit}>Submit</button>
         <button onClick={onClose}>Close</button>
 
         </form>

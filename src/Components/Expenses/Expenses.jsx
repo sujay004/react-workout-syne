@@ -19,14 +19,17 @@ const Expenses = ()=>{
         console.log('inout value from child',inputValue )
         setShowState(false);
     }
+    const onSubmit = (submitResult)=>{
+        console.log('inout value from child',submitResult )
+    }
 
     return (
         <div className="container">
             <h1>Expenses loaded</h1>
-            <button onClick={changeState}>Show Form</button>
+            <button onClick={changeState} >Show Form</button>
             <div className="row mb-3 mt-2">
                 {/* {addShowState?<AddExpenseForm>:null} */}
-                {addShowState&& <AddExpenseForm closeForm={closeForm}></AddExpenseForm>}
+                {addShowState&& <AddExpenseForm closeForm={closeForm} onSubmit={onSubmit}></AddExpenseForm>}
 
             </div>
             <div className="row">
