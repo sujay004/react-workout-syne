@@ -1,17 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import Expenses from './Components/Expenses/Expenses';
 
 function App() {
   let user ={firstName:'sujay'};
   let paraEl = <p>Sujay paragraph testing</p>;
   return (
-
-    <div className="App">
-      <p>{user.firstName.toUpperCase()}</p>
-      <p>Sum: {12+12}</p>
-      {paraEl}
-    </div>
+    <React.Fragment>
+   <Expenses></Expenses>
+    </React.Fragment>
  //This is jsx syntax
 
   );
