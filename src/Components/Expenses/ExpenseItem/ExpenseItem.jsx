@@ -2,6 +2,9 @@ import React from "react";
 
 
 const ExpenseItem = (props)=>{
+    const deleteExpense = ()=>{
+        props.deleteExpense(props.expnese.id)
+    }
     return (
         <div className="col-4">
         <div className="card">
@@ -14,6 +17,7 @@ const ExpenseItem = (props)=>{
             <p> Amount : {props.expnese.amount}</p>
             </div>
         </div>
+        <button onClick={deleteExpense}>Delete</button>
     </div>
     )
 }

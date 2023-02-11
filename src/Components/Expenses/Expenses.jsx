@@ -26,6 +26,10 @@ const Expenses = ()=>{
         setExpnese([submitResult,...expnese])
         console.log('After added expnese value',expnese)
     }
+    const deleteExpense = (idValue)=>{
+        console.log('card id value  ',idValue )
+        setExpnese(expnese.filter(e=>e.id!=idValue))
+    }
 
     return (
         <div className="container">
@@ -37,7 +41,7 @@ const Expenses = ()=>{
 
             </div>
             <div className="row">
-                {expnese.map(e=> <ExpenseItem expnese={e} key={e.id}></ExpenseItem>)}
+                {expnese.map(e=> <ExpenseItem expnese={e} key={e.id} deleteExpense={deleteExpense}></ExpenseItem>)}
             </div>
         </div>
     )
