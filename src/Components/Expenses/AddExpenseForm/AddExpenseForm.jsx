@@ -4,10 +4,10 @@ import React,{ useState } from "react";
 
 const AddExpenseForm = ()=>{
 
-    let inputValue ='';
+    let [inputValue,setInputValue ]= useState('');
     const ChangeValue = (event)=>{
         console.log(event.target.value) //Here value will not update becasue for normal js variable
-        inputValue = event.target.value;
+        setInputValue(event.target.value)
     }
 
     return (
