@@ -28,13 +28,14 @@ const Expenses = ()=>{
     }
     const deleteExpense = (idValue)=>{
         console.log('card id value  ',idValue )
-        setExpnese(expnese.filter(e=>e.id!=idValue))
+        // setExpnese(expnese.filter(e=>e.id!=idValue))
+        setExpnese(prevExpense=>prevExpense.filter(e=>e.id!=idValue))
     }
 
     return (
         <div className="container">
             <h1>Expenses loaded</h1>
-            <button onClick={changeState} >Show Form</button>
+            <button className="btn btn-primary" onClick={changeState} >Show Form</button>
             <div className="row mb-3 mt-2">
                 {/* {addShowState?<AddExpenseForm>:null} */}
                 {addShowState&& <AddExpenseForm closeForm={closeForm} onSubmit={onSubmit}></AddExpenseForm>}

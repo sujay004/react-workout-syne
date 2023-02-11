@@ -29,8 +29,8 @@ const AddExpenseForm = (props)=>{
         <input type="text" onChange={ChangeValue} />
         <p>Result of inpout Value: {inputValue}</p>
 
-        <button onClick={onSubmit}>Submit</button>
-        <button onClick={onClose}>Close</button>
+        <button className="btn btn-success" onClick={onSubmit}>Submit</button>
+        <button className="btn btn-danger" onClick={onClose}>Close</button>
 
         </form>
         </div>

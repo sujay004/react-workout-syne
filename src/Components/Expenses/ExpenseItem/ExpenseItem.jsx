@@ -17,7 +17,7 @@ const ExpenseItem = (props)=>{
             <p> Amount : {props.expnese.amount}</p>
             </div>
         </div>
-        <button onClick={deleteExpense}>Delete</button>
+        <button className="btn btn-danger" onClick={deleteExpense}>Delete</button>
     </div>
     )
 }
