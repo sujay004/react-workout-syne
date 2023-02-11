@@ -8,7 +8,7 @@ function App() {
   let paraEl = <p>Sujay paragraph testing</p>;
   return (
     <React.Fragment>
-   <Expenses></Expenses>
+      <Expenses></Expenses>
     </React.Fragment>
  //This is jsx syntax
 
