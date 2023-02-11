@@ -37,7 +37,7 @@ const Expenses = ()=>{
 
             </div>
             <div className="row">
-                {expnese.map(e=> <ExpenseItem expnese={e}></ExpenseItem>)}
+                {expnese.map(e=> <ExpenseItem expnese={e} key={e.id}></ExpenseItem>)}
             </div>
         </div>
     )
