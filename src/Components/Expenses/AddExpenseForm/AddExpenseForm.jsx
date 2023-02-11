@@ -1,5 +1,5 @@
 import React,{ useState } from "react";
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 const AddExpenseForm = (props)=>{
@@ -15,8 +15,9 @@ const AddExpenseForm = (props)=>{
     const onSubmit = (event)=>{
         event.preventDefault();
         props.onSubmit({
-            id:'',
-            expenseAmount: inputValue
+            id:uuidv4(),
+            amount: inputValue,
+            title:'Shopping',
         })
     }
 

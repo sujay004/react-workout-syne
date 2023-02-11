@@ -4,13 +4,15 @@ import AddExpenseForm from "./AddExpenseForm/AddExpenseForm";
 
 
 const Expenses = ()=>{
-    let expnese = [{
+    let INTITAL_VALUE = [{
         id:'001',
         title:'Shopping',
         amount:100
     }];
+    const [expnese,setExpnese]= useState(INTITAL_VALUE)
 
     let [addShowState,setShowState] = useState(false);
+
 
    const changeState = ()=>{
         setShowState(!addShowState);
@@ -20,7 +22,9 @@ const Expenses = ()=>{
         setShowState(false);
     }
     const onSubmit = (submitResult)=>{
-        console.log('inout value from child',submitResult )
+        console.log('inout value from child',submitResult,expnese )
+        setExpnese([submitResult,...expnese])
+        console.log('After added expnese value',expnese)
     }
 
     return (
@@ -33,9 +37,7 @@ const Expenses = ()=>{
 
             </div>
             <div className="row">
-            <ExpenseItem expnese={expnese[0]}></ExpenseItem>
-            <ExpenseItem expnese={expnese[0]}></ExpenseItem>
-            <ExpenseItem expnese={expnese[0]}></ExpenseItem>
+                {expnese.map(e=> <ExpenseItem expnese={e}></ExpenseItem>)}
             </div>
         </div>
     )
