@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Expenses from './Components/Expenses/Expenses';
+import Counter from './Components/Counter/Counter';
 
 function App() {
   let user ={firstName:'sujay'};
@@ -9,6 +10,7 @@ function App() {
   return (
     <React.Fragment>
       <Expenses></Expenses>
+      <Counter></Counter>
     </React.Fragment>
  //This is jsx syntax
 
